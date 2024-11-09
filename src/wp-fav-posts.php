@@ -18,7 +18,7 @@ require_once(PLUGIN_DIR . "src/db_utils.php");
 
 
 
-class WP_Fav_Posts {
+class WPFavPosts {
     public function __construct() {
         add_action("init", "on_init");
     }
@@ -37,5 +37,5 @@ class WP_Fav_Posts {
 
 
 
-new WP_Fav_Posts();
+new WPFavPosts();
 
