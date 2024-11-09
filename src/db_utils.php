@@ -1,5 +1,10 @@
 <?php
 
+if (!defined("ABSPATH")) exit;
+
+require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+
+
 class Database {
     public static function createTable() {
         global $wpdb;
