@@ -32,6 +32,11 @@ class WPFavPosts {
             "callback" => "wpfav_add_bookmark",
             "permission_callback" => "wpfav_is_authed"
         ]);
+        register_rest_route("wpfav/v1", "/remove-bookmark/(?P<id>\d+)", [
+            "methods"  => "POST",
+            "callback" => "wpfav_remove_bookmark",
+            "permission_callback" => "wpfav_is_authed"
+        ]);
     }
 }
 
