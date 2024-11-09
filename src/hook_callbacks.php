@@ -22,3 +22,9 @@ function wpfav_create_table() {
 
     dbDelta($sql);
 }
+
+
+
+function wpfav_is_authed() {
+    return is_user_logged_in();
+}
