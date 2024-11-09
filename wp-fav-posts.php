@@ -20,7 +20,7 @@ require_once(PLUGIN_DIR . "src/db_utils.php");
 
 class WPFavPosts {
     public function __construct() {
-        add_action("init", "on_init");
+        add_action("init", [$this, "on_init"]);
     }
 
 
