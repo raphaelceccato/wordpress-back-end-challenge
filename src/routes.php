@@ -2,10 +2,7 @@
 
 if (!defined("ABSPATH")) exit;
 
-define("PLUGIN_DIR", plugin_dir_path(__FILE__));
 
-
-require_once(PLUGIN_DIR . "src/routes.php");
 require_once(PLUGIN_DIR . "src/db_utils.php");
 
 
