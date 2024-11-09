@@ -42,6 +42,11 @@ class WPFavPosts {
             "callback" => "wpfav_is_bookmarked",
             "permission_callback" => "wpfav_is_authed"
         ]);
+        register_rest_route("wpfav/v1", "/get-bookmarks", [
+            "methods"  => "GET",
+            "callback" => "wpfav_get_bookmarks",
+            "permission_callback" => "wpfav_is_authed"
+        ]);
     }
 }
 

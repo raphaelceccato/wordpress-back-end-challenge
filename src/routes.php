@@ -70,3 +70,13 @@ function wpfav_is_bookmarked($request) {
 
     wp_send_json_success([ "is_bookmarked" => $is_bookmarked ]);
 }
+
+
+
+function wpfav_get_bookmarks($request) {
+    $user_id = get_current_user_id();
+
+    $bookmarks = Database::getBookmarks($user_id);
+
+    wp_send_json_success([ "bookmarks" => $bookmarks ]);
+}
